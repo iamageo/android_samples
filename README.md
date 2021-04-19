@@ -4,4 +4,5 @@ This repo contains examples basic application in java
 
 # Coding examples
 
-1. RecyclerView
+* RecyclerView
+* RecyclerView - Grid
