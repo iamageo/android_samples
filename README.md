@@ -15,4 +15,4 @@ Below the examples that have already been implemented and are available in this 
   * SharedPreferences
 
 - Kotlin  
-  * Nothing
+  * RecyclerView
