@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.ernestoyaquello.dragdropswiperecyclerview.DragDropSwipeRecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:behind_swiped_item_bg_color="#E53935"
+            app:behind_swiped_item_bg_color_secondary="#1E88E5"
+            app:behind_swiped_item_icon_margin="16dp"
+            app:divider="@drawable/list_divider"
+            app:item_layout="@layout/list_item_layout" />
+
+    </FrameLayout>
+</RelativeLayout>
