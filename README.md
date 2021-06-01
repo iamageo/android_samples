@@ -16,3 +16,4 @@ Below the examples that have already been implemented and are available in this 
 
 - Kotlin  
   * RecyclerView
+  * Drag and Drop
