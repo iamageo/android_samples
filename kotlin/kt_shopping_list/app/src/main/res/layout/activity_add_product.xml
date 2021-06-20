@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".AddProduct">
+
+
+    <TextView
+        android:text="New product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="16dp"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_add"
+        android:layout_gravity="center"
+        android:id="@+id/new_product_img"/>
+
+    <EditText
+        android:layout_marginTop="8dp"
+        android:id="@+id/new_product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Product name"
+        />
+
+    <EditText
+        android:layout_marginTop="8dp"
+        android:inputType="numberDecimal"
+        android:id="@+id/new_product_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Product price"
+        />
+
+    <EditText
+        android:layout_marginTop="8dp"
+        android:inputType="numberDecimal"
+        android:id="@+id/new_product_qnt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Product quant"
+        />
+
+    <Button
+        android:text="Add new product"
+        android:layout_marginTop="8dp"
+        android:id="@+id/new_product_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+</LinearLayout>
