@@ -6,8 +6,10 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.iamageo.kt_shopping_list.model.Product
-import com.iamageo.kt_shopping_list.utils.mutableListProduct
+import com.iamageo.kt_shopping_list.db.database
+import com.iamageo.kt_shopping_list.utils.toByteArray
+import org.jetbrains.anko.db.*
+import org.jetbrains.anko.toast
 import kotlinx.android.synthetic.main.activity_add_product.*
 
 class AddProduct : AppCompatActivity() {
@@ -27,17 +29,32 @@ class AddProduct : AppCompatActivity() {
 
             val product_qnt = new_product_qnt.text.toString()
 
+
             if(product_name.isNotEmpty() && product_qnt.isNotEmpty() && product_value.isNotEmpty()) {
 
-                val new_product = Product(product_name, product_qnt.toInt(), product_value.toDouble(), imageBitmap)
+                database.use {
 
-                mutableListProduct.add(new_product)
+                    val idProduto = insert("products",
+                            "name" to product_name,
+                            "qtd" to product_qnt,
+                            "value" to product_value,
+                            "photo" to imageBitmap?.toByteArray()
+                    )
 
-                new_product_name.text.clear()
+                    if (idProduto != -1L) {
 
-                new_product_price.text.clear()
+                        toast("Item inserido com sucesso")
 
-                new_product_qnt.text.clear()
+                        new_product_name.text.clear()
+
+                        new_product_price.text.clear()
+
+                        new_product_qnt.text.clear()
+
+                    } else {
+                        toast("Erro ao inserir item no banco de dados")
+                    }
+                }
 
             } else {
 

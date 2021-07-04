@@ -4,8 +4,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.iamageo.kt_shopping_list.adapter.ProductAdapter
+import com.iamageo.kt_shopping_list.db.database
+import com.iamageo.kt_shopping_list.model.Product
 import com.iamageo.kt_shopping_list.utils.mutableListProduct
+import com.iamageo.kt_shopping_list.utils.toBitmap
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.db.parseList
+import org.jetbrains.anko.db.rowParser
+import org.jetbrains.anko.db.select
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,12 +40,34 @@ class MainActivity : AppCompatActivity() {
 
         val adapter = listview_products.adapter as ProductAdapter
 
-        adapter.clear()
-        adapter.addAll(mutableListProduct)
+        database.use {
 
-        val sum = mutableListProduct.sumByDouble { it.value * it.qnt }
+            select("products").exec {
 
-        total_product.text = sum.toString()
+                val parser = rowParser {
+                    id: Int,
+                            name: String,
+                            qtd: Int,
+                            value: Double,
+                            photo: ByteArray? ->
+
+                    Product(id, name, qtd, value, photo?.toBitmap())
+                }
+
+                var productsList = parseList(parser)
+
+                adapter.clear()
+                adapter.addAll(productsList)
+
+                val sum = productsList.sumByDouble { it.value * it.qnt }
+
+                total_product.text = sum.toString()
+            }
+
+
+
+        }
+
     }
 }
 
