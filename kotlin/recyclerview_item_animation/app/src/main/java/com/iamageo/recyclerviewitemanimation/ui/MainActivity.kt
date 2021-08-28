@@ -9,7 +9,7 @@ import com.iamageo.recyclerviewitemanimation.model.Contact
 
 class MainActivity : AppCompatActivity() {
     lateinit var recyclerview: RecyclerView
-    lateinit var movieAdapter: ContactAdapter
+    lateinit var contactAdapter: ContactAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,13 +17,13 @@ class MainActivity : AppCompatActivity() {
 
         initComponents()
         setAdapterInRecyclerView()
-        movieAdapter.setContacts(fakeContacts())
+        contactAdapter.setContacts(fakeContacts())
 
     }
 
     private fun setAdapterInRecyclerView() {
-        movieAdapter = ContactAdapter()
-        recyclerview.adapter = movieAdapter
+        contactAdapter = ContactAdapter()
+        recyclerview.adapter = contactAdapter
     }
 
     private fun initComponents() {
