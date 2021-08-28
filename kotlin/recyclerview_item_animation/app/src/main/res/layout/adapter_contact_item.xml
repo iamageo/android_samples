@@ -15,7 +15,7 @@
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imgContact"
+            android:id="@+id/imv_photo"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_margin="8dp"
@@ -26,21 +26,21 @@
 
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tvTitle"
+            android:id="@+id/tv_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@android:color/darker_gray"
-            app:layout_constraintBottom_toTopOf="@+id/tvTag"
+            app:layout_constraintBottom_toTopOf="@+id/tv_number"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             android:layout_margin="8dp"
             tools:text=""
-            app:layout_constraintStart_toEndOf="@id/imgContact"
+            app:layout_constraintStart_toEndOf="@id/imv_photo"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="packed" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tvTag"
+            android:id="@+id/tv_number"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -49,8 +49,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@id/imgContact"
-            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+            app:layout_constraintStart_toEndOf="@id/imv_photo"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
