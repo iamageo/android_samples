@@ -9,11 +9,13 @@ This repository includes examples of using components on android / kotlin, feel 
 
 Below the examples that have already been implemented and are available in this repository
 
-- Java
-  * RecyclerView
-  * RecyclerView - Grid
-  * SharedPreferences
+## Java
+* [x] RecyclerView
+* [x] RecyclerView - Grid
+* [x] SharedPreferences
 
-- Kotlin  
-  * RecyclerView
-  * Drag and Drop
+## Kotlin  
+ * [x] RecyclerView
+ * [x] Drag and Drop
+ * [ ] ViewModel
+ * [ ] Dependency injection
