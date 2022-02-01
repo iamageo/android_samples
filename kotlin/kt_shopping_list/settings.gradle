@@ -1,2 +1,0 @@
-include ':app'
-rootProject.name = "kt_shopping_list"
