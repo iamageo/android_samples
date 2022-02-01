@@ -1,2 +1,0 @@
-com/iamageo/draganddrop/BuildConfig.java
- com.iamageo.draganddrop.BuildConfig
