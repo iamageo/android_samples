@@ -17,8 +17,9 @@ Below the examples that have already been implemented and are available in this 
 ## Kotlin  
  * [x] RecyclerView
  * [x] Drag and Drop
- * [ ] ViewModel
+ * [x] ViewModel: [Quote app](https://github.com/iamageo/quote), [Ghibli app](https://github.com/iamageo/ghibli) and [Weather app](https://github.com/EASY-CODES/weather)
  * [ ] Dependency injection:
-    * [x] Dagger Hilt -> see these repositories: [Quote app](https://github.com/iamageo/quote), [Ghibli app](https://github.com/iamageo/ghibli) and [Weather app](https://github.com/EASY-CODES/weather)
+    * [x] Dagger Hilt: [Quote app](https://github.com/iamageo/quote), [Ghibli app](https://github.com/iamageo/ghibli) and [Weather app](https://github.com/EASY-CODES/weather)
     * [ ] Koin
     * [ ] Dagger 2
+
